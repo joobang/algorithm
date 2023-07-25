@@ -120,7 +120,5 @@ def solution(k: int, dic: List[str], chat:str):
     answer = ' '.join(answer_list)
     return answer
 
-#print(solution(2,['slang','badword'],'badword ab.cd bad.ord .word sl.. bad.word'))
-print(solution(3,['abcde','cdefg','efgij'],'.. ab. cdefgh .gi. .z.'))
-
-
+print(solution(2,['slang','badword'],'badword ab.cd bad.ord .word sl.. bad.word'))
+#print(solution(3,['abcde','cdefg','efgij'],'.. ab. cdefgh .gi. .z.'))
