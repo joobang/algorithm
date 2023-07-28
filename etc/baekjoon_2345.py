@@ -38,9 +38,6 @@
 #     ['mournful gladness mournful','annoyed gladness good thrilled','mournful melancholy melancholy']
 # )
 # )
-
-
-
 from typing import List
 
 def make_words(k:int, word:str):
@@ -53,7 +50,6 @@ def make_words(k:int, word:str):
         #print(word_list[i])
         word_list.insert(i,'*')
         answer.append(''.join(word_list))
-    
     for a in answer:
         if '.' in a:
             answer += make_words(k,a)
