@@ -63,6 +63,8 @@ function countArray(n, k, x) {
         x가 아닌 수 개수
         x가 아닌 수 = 이전 x의 수 * x를 제외한 k의 수 + 이전 x가 아닌 수 * x와 x가 아닌(연속된) 수를 제외한 k의 수
         b[i] = a[i-1]*(k-1) + b[i-1]*(k-2)
+
+        x가 1일 때는 a[0],b[0]이 1,0이 된다.
     
     */
     let a = new Array(n).fill(0);
