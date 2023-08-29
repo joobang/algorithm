@@ -31,7 +31,16 @@ function readLine() {
 
 function cost(B) {
     // Write your code here
-
+    let a=0, b=0;
+    for(let i=1; i<B.length; i++){
+        
+        let sum_a = Math.max(Math.abs(B[i]-B[i-1]) + a, Math.abs(B[i] - 1) + b);
+        let sum_b = Math.max(Math.abs(1-B[i-1]) + a, b);
+        a = sum_a;
+        b = sum_b;
+    }
+    
+    return Math.max(a, b);
 }
 
 function main() {
