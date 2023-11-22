@@ -2,6 +2,7 @@ from collections import deque
 
 def solution(tickets):
     answer = []
+    path = []
     ticket_dict = {}
     curr_end = ""
     
@@ -16,19 +17,15 @@ def solution(tickets):
             ticket_dict[start] = [end]
        
     
-    
-    for i in range(len(tickets)):
-  
-        if i == 0:
-            answer.append("ICN")
-            curr_end = ticket_dict["ICN"].pop()
-            answer.append(curr_end)
-        else:
-            if len(ticket_dict[curr_end]) > 0:
-                curr_end = ticket_dict[curr_end].pop()
-                answer.append(curr_end)
-    
-    
-            
-    
-    return answer
+    print(ticket_dict)
+    #print(ticket_dict.get("ICN"))
+    def dfs(airport):
+        print("airport : ", airport)
+        while ticket_dict.get(airport):
+            dfs(ticket_dict[airport].pop())
+        answer.append(airport)
+        print(answer)
+
+    dfs("ICN")
+        
+    return answer[::-1]
