@@ -29,3 +29,7 @@ def solution(tickets):
     dfs("ICN")
         
     return answer[::-1]
+
+solution([["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL", "SFO"]])
+solution([["ICN", "JFK"], ["HND", "IAD"], ["JFK", "HND"]])
+solution([["ICN", "A"], ["ICN", "B"], ["B", "ATL"], ["ATL", "ICN"]])
