@@ -1,17 +1,24 @@
 function solution(input){
-    let input_arr = input.split('');
-    let cnt = 0
 
-    let alpa = ['c=','c-','dz=','d-','lj','nj','s=','z=']
-    let pos = 0
-    while(pos !== -1){
+    let alpa = ['c=','c-','dz=','d-','lj','nj','s=','z='];
+
+    let findAlpa = (s,c) =>{
+        //console.log(s,c);
         for(let i = 0; i<alpa.length; i++){
-            if(input.indexOf(alpa[i]) != -1){
-                cnt++;
-                input = input.replace(alpa[i],'');
+            if(s.indexOf(alpa[i]) != -1){
+                c++;
+                s = s.replace(alpa[i],' ');
+                return findAlpa(s,c);
             }
         }
+
+        return [s,c];
     }
+    
+    let temp = findAlpa(input,0);
+    let repl = temp[0].replaceAll(' ','');
+    let input_arr = repl.split('');
+    console.log(temp[1] + input_arr.length);
 }
 
 const readline = require("readline");
