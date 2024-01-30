@@ -3,7 +3,7 @@ import sys
 
 A, B, V = map(int , sys.stdin.readline().split())
 
-//print(math.ceil(V/A))
+#print(math.ceil(V/A))
 diff = A - B;
 if A == V:
     print(1)
